@@ -1,0 +1,69 @@
+.features {
+    margin-top: 4rem;
+}
+
+.features__title {
+    text-align: center;
+}
+
+.features__item {
+    margin: 3rem 0; /* (3) é o Top e down e (0) é left e right */
+}
+
+.features__item-image {
+    margin: 0 auto; /* margin auto é center por padrão */
+    display: block; /* para margin auto funcionar precisa do display: block*/
+    width: 5rem;
+}
+
+.features__item-title {
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.features__item-content {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .features {
+        margin-top: 8rem;
+    }
+}
+
+@media (min-width: 840px) {
+    .features__container {
+        margin-top: 5rem;
+        column-count: 3; /* divide os itens em três colunas  */
+        column-gap: 10rem; /* dá espaços entre as colunas */
+    }
+    
+    .features__item {
+        margin-top: 0;
+        /* zerando o margin top do features-item descrita na section features para que as colunas fiquem alinhadas */
+    }
+}
+
+@media (min-width: 1024px) {
+    .features {
+        margin-top: 4rem;
+    }
+
+    .features__title {
+        font-size: 2.5rem;
+    }
+
+    .features__item-image {
+        width: 4rem;
+    }
+
+    .features__item-title {
+        font-size: 1.3rem;
+    }
+
+    .features__item-content {
+        font-size: 1rem;
+    }
+}

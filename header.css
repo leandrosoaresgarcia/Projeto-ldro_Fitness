@@ -1,0 +1,70 @@
+.header { 
+    margin-top: 1.5rem;
+}
+
+.header::before { /* Pseudo elements before: significa ter elemento antes da header*/
+    content: ''; /* para existir o pseudo elements precisa manter pelo menos as '' */
+    position: absolute;
+    top: 0; /* mantém o pseudo elements no limite do top */
+    left: 0; /* mantém o pseudo elements no limite a esquerda */
+    width: 100%;
+    height: 60rem;
+    background: var(--primary-color);
+    z-index: -1; /* permite que o background fique por trás dos elementos */
+}
+
+.header__logo {
+    width: 15rem; /* tamanho do logo */
+}
+
+.header__nav {
+    display: flex; /* posicionou os menus na horizontal */
+    justify-content: space-between; /* deu espaço entre os menus */
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.header__nav-item {
+    text-decoration: none; /* tirou o sublinhado dos menus. Vem por padrão pelo navegador */
+    color: #fff;
+    transition: color 250ms; /* transição entre as cores branca e laranja de milisegundos (para pseudo class abaixo) */
+}
+
+.header__nav-item:hover {  /* Isto é uma pseudo class. Propriedade para ação com mouse hover */
+    color: #FF8C2B;
+}
+
+/* RESPONSIVIDADE */
+
+@media (min-width: 768px) {
+    .header::before {
+        height: 70%;
+    }
+}
+
+@media (min-width: 900px) {
+    .header {
+        display: flex; /* joga o menu pro lado do logo */
+        margin-top: 3rem;
+        justify-content: space-between; /* dá espaço entre o logo e os menus */
+    }
+
+    .header__nav-item {
+        margin-left: 3rem;
+    }
+
+    .header::before {
+        height: 38rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__logo {
+        width: 12rem;
+    }
+
+    .header__nav {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+    }
+}

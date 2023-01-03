@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+:root { /* Variáveis */
+    --primary-color: #000B19; 
+    --white-text: #d0d0d0;
+    --dark-text: #6b6b6b;
+
+    scroll-behavior: smooth; /* permite encaminhar os menus aos ambientes de forma lenta */
+    font-size: 62.5%; 
+    /* 1rem = 100% = 16px, ou seja, agora -> 1rem = 62.5% = 10px => 1.6rem, mais fácil! */ 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased; 
+    font-size: 1.6rem; /* voltando o projeto para 16px de tamanhos por padrão. */
+}   
+
+/* GLOBAL */
+
+.container { /* criando uma classe generalizada */
+    padding: 0 1rem; /* (0) é medida pra cima e para baixo, (3rem) medida para os lados direita e esquerda */
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.text { /* criando uma classe generalizada */
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.text--dark { /* classe modificadora derivada da .text */
+    color: var(--dark-text);
+}
+
+.text--white { /* classe modificadora derivada da .text */
+    color: var(--white-text);
+}
+
+.title { /* classe Generalizada */
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--primary-color);
+    line-height: 1.7;
+}
+
+.tag {
+    margin-top: 3rem;
+    color: #aaaaaa;
+    display: block;
+    text-transform: uppercase;
+}
+
+.lg-only {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .tag {
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 90rem;
+    }
+
+    .lg-only {
+        display: initial;
+    }
+
+    .tag {
+        font-size: 1.3rem;
+    }
+}
